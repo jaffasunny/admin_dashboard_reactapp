@@ -1,3 +1,5 @@
+
+
 export const userData = [
 	{
 		name: "Jan",
@@ -48,3 +50,98 @@ export const userData = [
 		"Active User": 900,
 	},
 ];
+
+export const userRows = [
+	{
+		id: 1,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 2,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 3,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 4,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 5,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 6,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 7,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 8,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 9,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+	{
+		id: 10,
+		username: "John Snow",
+		avatar:
+			"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+		email: "jon@gmail.com",
+		status: "active",
+		transaction: "$120",
+	},
+];
+
+
