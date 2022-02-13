@@ -1,10 +1,10 @@
 import React from "react";
-import Chart from "../../charts/Chart";
-import FeaturedInfo from "../../featuredInfo/FeaturedInfo";
+import Chart from "../../components/charts/Chart";
+import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
 import "./home.css";
-import { userData } from "../../dummyData";
-import WidgetSm from "../../widgetsSm/WidgetSm";
-import WidgetLg from "../../widgetsLg/WidgetLg";
+import { userData } from "../../components/dummyData";
+import WidgetSm from "../../components/widgetsSm/WidgetSm";
+import WidgetLg from "../../components/widgetsLg/WidgetLg";
 
 const Home = () => {
 	return (

@@ -6,14 +6,18 @@ import {
 	MailOutline,
 	PermIdentity,
 	PhoneAndroid,
+	Publish,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const User = () => {
 	return (
 		<div className="user">
 			<div className="userTitleContainer">
 				<h1 className="userTitle">Edit User</h1>
-				<button className="userAddButton">Create</button>
+				<Link to={"/newUser"}>
+					<button className="userAddButton">Create</button>
+				</Link>
 			</div>
 			<div className="userContainer">
 				<div className="userShow">
@@ -65,8 +69,7 @@ const User = () => {
 									className="userUpdateInput"
 								/>
 							</div>
-						</div>
-						<div className="userUpdateLeft">
+
 							<div className="userUpdateItem">
 								<label>Full name</label>
 								<input
@@ -75,8 +78,25 @@ const User = () => {
 									className="userUpdateInput"
 								/>
 							</div>
-						</div>
-						<div className="userUpdateLeft">
+
+							<div className="userUpdateItem">
+								<label>Username</label>
+								<input
+									type="text"
+									placeholder="annabeck99"
+									className="userUpdateInput"
+								/>
+							</div>
+
+							<div className="userUpdateItem">
+								<label>Username</label>
+								<input
+									type="text"
+									placeholder="annabeck99"
+									className="userUpdateInput"
+								/>
+							</div>
+
 							<div className="userUpdateItem">
 								<label>Username</label>
 								<input
@@ -86,27 +106,25 @@ const User = () => {
 								/>
 							</div>
 						</div>
-						<div className="userUpdateLeft">
-							<div className="userUpdateItem">
-								<label>Username</label>
+						<div className="userUpdateRight">
+							<div className="userUpdateUpload">
+								<img
+									src="https://images.pexels.com/photos/7561757/pexels-photo-7561757.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+									alt="usr upload img"
+									className="userUpdateImg"
+								/>
+								<label htmlFor="file">
+									<Publish className="userUpdateIcon" />
+								</label>
 								<input
-									type="text"
-									placeholder="annabeck99"
-									className="userUpdateInput"
+									type="file"
+									name=""
+									id="file"
+									style={{ display: "none" }}
 								/>
 							</div>
+							<button className="userUpdateButton">Update</button>
 						</div>
-						<div className="userUpdateLeft">
-							<div className="userUpdateItem">
-								<label>Username</label>
-								<input
-									type="text"
-									placeholder="annabeck99"
-									className="userUpdateInput"
-								/>
-							</div>
-						</div>
-						<div className="userUpdateRight"></div>
 					</form>
 				</div>
 			</div>
