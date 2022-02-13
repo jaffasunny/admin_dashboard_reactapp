@@ -9,8 +9,6 @@ const ProductList = () => {
 	const [data, setData] = useState(productRows);
 
 	const handleDelete = (id) => {
-		// this filter function returns every id except
-		// the one that it matches with condition
 		setData(data.filter((item) => item.id !== id));
 	};
 
@@ -23,11 +21,7 @@ const ProductList = () => {
 			renderCell: (params) => {
 				return (
 					<div className="productListItem">
-						<img
-							className="productListImg"
-							src={params.row.img}
-							alt="User List Img"
-						/>
+						<img className="productListImg" src={params.row.img} alt="" />
 						{params.row.name}
 					</div>
 				);
@@ -67,12 +61,11 @@ const ProductList = () => {
 	return (
 		<div className="productList">
 			<DataGrid
-				rows={productRows}
+				rows={data}
+				disableSelectionOnClick
 				columns={columns}
 				pageSize={8}
-				rowsPerPageOptions={[5]}
 				checkboxSelection
-				disableSelectionOnClick
 			/>
 		</div>
 	);

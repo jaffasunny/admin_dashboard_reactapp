@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	LineStyle,
 	Timeline,
@@ -17,16 +17,27 @@ import { Link } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
+	const [isActive, setIsActive] = useState(false);
+
+	const toggleClass = () => {
+		setIsActive(!isActive);
+		return "active";
+	};
+
 	return (
 		<div className="sidebar">
 			<div className="sidebarWrapper">
 				<div className="sidebarMenu">
 					<h3 className="sidebarTitle">Dashboard</h3>
 					<ul className="sidebarList">
-						<li className="sidebarListItem active">
-							<LineStyle className="sidebarIcon" />
-							Home
-						</li>
+						<Link to="/" className="link">
+							<li
+								className={`sidebarListItem  + ${!isActive}`}
+								onClick={() => toggleClass()}>
+								<LineStyle className="sidebarIcon" />
+								Home
+							</li>
+						</Link>
 						<li className="sidebarListItem">
 							<Timeline className="sidebarIcon" />
 							Analytics
