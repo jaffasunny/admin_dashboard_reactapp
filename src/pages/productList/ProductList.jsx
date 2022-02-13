@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
-import { userRows } from "../../components/dummyData";
+import React, { useState } from "react";
+import { productRows } from "../../components/dummyData";
 import { DeleteOutline } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import "./productList.css";
 
-const UserList = () => {
-	const [data, setData] = useState(userRows);
+const ProductList = () => {
+	const [data, setData] = useState(productRows);
 
 	const handleDelete = (id) => {
 		// this filter function returns every id except
@@ -17,31 +17,31 @@ const UserList = () => {
 	const columns = [
 		{ field: "id", headerName: "ID", width: 90 },
 		{
-			field: "user",
-			headerName: "User",
+			field: "product",
+			headerName: "Product",
 			width: 200,
 			renderCell: (params) => {
 				return (
-					<div className="userListUser">
+					<div className="productListItem">
 						<img
-							className="userListImg"
-							src={params.row.avatar}
+							className="productListImg"
+							src={params.row.img}
 							alt="User List Img"
 						/>
-						{params.row.username}
+						{params.row.name}
 					</div>
 				);
 			},
 		},
-		{ field: "email", headerName: "Email", width: 200 },
+		{ field: "stock", headerName: "Stock", width: 200 },
 		{
 			field: "status",
 			headerName: "Status",
 			width: 120,
 		},
 		{
-			field: "transaction",
-			headerName: "Transaction Volume",
+			field: "price",
+			headerName: "Price",
 			width: 160,
 		},
 		{
@@ -51,11 +51,11 @@ const UserList = () => {
 			renderCell: (params) => {
 				return (
 					<>
-						<Link to={"/user/" + params.row.id}>
-							<button className="userListEdit">Edit</button>
+						<Link to={"/product/" + params.row.id}>
+							<button className="productListEdit">Edit</button>
 						</Link>
 						<DeleteOutline
-							className="userListDelete"
+							className="productListDelete"
 							onClick={() => handleDelete(params.row.id)}
 						/>
 					</>
@@ -65,9 +65,9 @@ const UserList = () => {
 	];
 
 	return (
-		<div className="userList">
+		<div className="productList">
 			<DataGrid
-				rows={data}
+				rows={productRows}
 				columns={columns}
 				pageSize={8}
 				rowsPerPageOptions={[5]}
@@ -78,4 +78,4 @@ const UserList = () => {
 	);
 };
 
-export default UserList;
+export default ProductList;

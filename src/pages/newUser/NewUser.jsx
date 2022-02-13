@@ -1,7 +1,6 @@
-import React from "react";
 import "./newUser.css";
 
-const NewUser = () => {
+export default function NewUser() {
 	return (
 		<div className="newUser">
 			<h1 className="newUserTitle">New User</h1>
@@ -20,7 +19,7 @@ const NewUser = () => {
 				</div>
 				<div className="newUserItem">
 					<label>Password</label>
-					<input type="Password" placeholder="password" />
+					<input type="password" placeholder="password" />
 				</div>
 				<div className="newUserItem">
 					<label>Phone</label>
@@ -33,17 +32,18 @@ const NewUser = () => {
 				<div className="newUserItem">
 					<label>Gender</label>
 					<div className="newUserGender">
+						<input type="radio" name="gender" id="male" value="male" />
 						<label for="male">Male</label>
-						<input type="radio" id="male" value="male" />
+						<input type="radio" name="gender" id="female" value="female" />
 						<label for="female">Female</label>
-						<input type="radio" id="female" value="female" />
+						<input type="radio" name="gender" id="other" value="other" />
 						<label for="other">Other</label>
-						<input type="radio" id="other" value="other" />
 					</div>
+					<button className="newUserButton">Create</button>
 				</div>
 				<div className="newUserItem">
 					<label>Active</label>
-					<select name="active" id="active" className="newUserSelect">
+					<select className="newUserSelect" name="active" id="active">
 						<option value="yes">Yes</option>
 						<option value="no">No</option>
 					</select>
@@ -51,6 +51,4 @@ const NewUser = () => {
 			</form>
 		</div>
 	);
-};
-
-export default NewUser;
+}
